@@ -72,10 +72,10 @@ public class Image {
         int nlines = 1;
         for(String word : text.split(" ")) {
 
-            int line_width = metrics.stringWidth(line+" "+word);
+            int line_width = metrics.stringWidth(String.join(" ", line, word).trim());
             if(line_width<width) {
-                line = line+" "+word;
-            } else if(!line.isEmpty()) {
+                line = String.join(" ", line, word).trim();
+            } else if(line.isEmpty()) {
                 //First word of the line extends beyond the line: chop and done.
                 g.drawString(chop(metrics, word, width), w_x, w_y);
                 return new int[]{nlines, fontHeight};
