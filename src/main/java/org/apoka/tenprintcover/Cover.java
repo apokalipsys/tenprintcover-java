@@ -204,7 +204,7 @@ public class Cover {
         } else if (c == 'u' || c == 'U') {
             cover_image.arc(x, y, 2 * s, 2 * s, 90, 90, shape_color, thick);
         } else if (c == 'i' || c == 'I') {
-            cover_image.arc(x - s, y, 2 * s, 2 * s, 0, 90, shape_color, thick);
+            cover_image.arc(x - s+thick, y, 2 * s, 2 * s, 0, 90, shape_color, thick);
         } else if (c == 'o' || c == 'O') {
             cover_image.rect(x, y, s, thick, shape_color);
             cover_image.rect(x, y, thick, s, shape_color);
@@ -224,9 +224,9 @@ public class Cover {
         } else if (c == 'h'|| c=='H') {
             cover_image.rect(x + s - (thick * 3), y, thick, s, shape_color);
         } else if (c == 'j' || c=='J') {
-            cover_image.arc(x, y - s, 2 * s, 2 * s, 180, 90, shape_color, thick);
+            cover_image.arc(x, y - s+thick, 2 * s, 2 * s, 180, 90, shape_color, thick);
         } else if (c == 'k'|| c=='K') {
-            cover_image.arc(x - s, y - s, 2 * s, 2 * s, 270, 90, shape_color, thick);
+            cover_image.arc(x - s+thick, y - s+thick, 2 * s, 2 * s, 270, 90, shape_color, thick);
         } else if (c == 'l'|| c=='L') {
             cover_image.rect(x, y, thick, s, shape_color);
             cover_image.rect(x, y + s - thick, s, thick, shape_color);
