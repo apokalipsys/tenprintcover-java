@@ -25,6 +25,14 @@ To generate a book cover on your project, simply initialize a Cover instance, ge
 
 Note that the default dimension of the image is set to 400×600 pixels and the file generated is a PNG.
 
+### Comparison
+
+Check the examples generated with both Python and Java implementation [here](docs/DEMO.md)
+
+|Python|Java|
+|:-------------:|:-------------:|
+|![alt text](docs/mobydick_py.png "python generated")|![alt text](docs/mobydick_j.png "java generated")|
+
 ### Other Resources
 
 - [10 PRINT “BOOK COVER” for iOS/Objective-C](https://github.com/mgiraldo/tenprintcover-ios)
