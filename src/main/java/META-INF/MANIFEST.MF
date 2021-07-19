@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: org.apoka.tenprintcover.TenPrintCover
+Class-Path: args4j-2.33.jar
+
