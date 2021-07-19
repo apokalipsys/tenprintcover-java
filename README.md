@@ -25,6 +25,12 @@ To generate a book cover on your project, simply initialize a Cover instance, ge
 
 Note that the default dimension of the image is set to 400×600 pixels and the file generated is a PNG.
 
+Also can be executed via command line.
+
+    java -jar TenPrintCover.jar -a "Haruki Murakami" -t "Kafka on the Shore" -o murakami-kafka.png
+
+Generate a single PNG book cover file `murakami-kafka.png` for the book titled *Kafka on the Shore* by the writer Haruki Murakami.
+
 ### Comparison
 
 Check the examples generated with both Python and Java implementation [here](docs/DEMO.md)
