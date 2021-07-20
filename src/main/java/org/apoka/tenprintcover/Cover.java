@@ -271,9 +271,9 @@ public class Cover {
             cover_image.rect(x, y, s / 2, s / 2, shape_color);
         } else if (c == '@') {
             cover_image.rect(x, y + (s / 2) - (thick / 2), s, thick, shape_color);
-        } else if (c == '[') {
-            cover_image.rect(x + (s / 2) - (thick / 2), y, thick, s, shape_color);
         } else if (c == ']') {
+            cover_image.rect(x + (s / 2) - (thick / 2), y, thick, s, shape_color);
+        } else if (c == '[') {
             cover_image.rect(x, y + (s / 2) - (thick / 2), s, thick, shape_color);
             cover_image.rect(x + (s / 2) - (thick / 2), y, thick, s, shape_color);
         } else if (c =='0') {
