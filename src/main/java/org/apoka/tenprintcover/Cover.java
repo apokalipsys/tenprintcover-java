@@ -36,7 +36,7 @@ public class Cover {
 
     public Cover(String title, String subtitle, String author, int width, int height) {
         this.title = title;
-        this.subtitle = subtitle;
+        this.subtitle = subtitle!=null?subtitle:"";
         this.author = author;
         this.cover_width = width;
         this.cover_height = height;
