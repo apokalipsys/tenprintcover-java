@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class Cover {
     public static final int DEFAULT_WIDTH = 400;
     public static final int DEFAULT_HEIGHT = 600;
-    private static final String C64_LETTERS = " qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM,;?<>@[]1234567890.=-+*/";
+    private static final String C64_LETTERS = " qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlL:zZxXcCvVbBnNmM,;?<>@[]1234567890.=-+*/!\"#$%'&\\()_";
     private final String title;
     private final String subtitle;
     private final String author;
@@ -318,9 +318,41 @@ public class Cover {
             cover_image.rect(x, y + s - (thick * 2), s, thick * 2, shape_color);
         } else if (c == ' ') {
             cover_image.rect(x, y, s, s, base_color);
+        } else if (c=='!') {
+            cover_image.rect(x, y, s/2, s, shape_color);
+        } else if (c=='"') {
+            cover_image.rect(x, y + s/2, s, s/2, shape_color);
+        } else if (c=='#') {
+            cover_image.rect(x, y, s, thick, shape_color);
+        } else if (c=='$') {
+            cover_image.rect(x, y+s-thick, s, thick, shape_color);
+        } else if (c=='%') {
+            cover_image.rect(x, y, thick, s, shape_color);
+        } else if (c=='\'') {
+            cover_image.rect(x+s-thick, y, thick, s, shape_color);
+        } else if (c=='&') {
+            drawCheckerboard(x, y, s/8, 8, 8);
+        } else if (c=='\\') {
+            drawCheckerboard(x, y, s/8, 4, 8);
+        } else if (c=='(') {
+            drawCheckerboard(x, y+s/2, s/8, 8, 4);
+        } else if (c==')') {
+            cover_image.triangle(x, y, x, y+s, x+s, y, shape_color);
+        } else if (c=='_') {
+            cover_image.triangle(x, y, x+s, y, x+s, y+s, shape_color);
         }
         //else
         //assert not "Implement."
+    }
+
+    private void drawCheckerboard(int x, int y, int squareWidth, int maxCol, int maxRow) {
+        for (int row=0;row<maxRow;row++){
+            for (int col = 0; col <maxCol; col++) {
+                if ( (row % 2) == (col % 2) ){
+                    cover_image.rect(x+(col*squareWidth), y+(row*squareWidth), squareWidth, squareWidth, shape_color);
+                }
+            }
+        }
     }
 
     /**
