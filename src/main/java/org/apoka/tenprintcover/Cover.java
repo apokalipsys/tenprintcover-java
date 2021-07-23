@@ -111,7 +111,7 @@ public class Cover {
         int[] tResult = cover_image.text(title, x, y, width, height, fill, title_font);
         if (subtitle != null && !subtitle.isEmpty()) {
             y = (int) Math.min(
-                    y + tResult[1] * tResult[0] * cover_height,
+                    y + tResult[1] * tResult[0],
                     title_height - subtitle_font_size
             );
             cover_image.text(subtitle, x, y, width, height, fill, subtitle_font);

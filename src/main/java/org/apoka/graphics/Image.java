@@ -32,7 +32,6 @@ public class Image {
         Graphics g = bufImage.getGraphics();
         g.setColor(color);
 
-        //g.fillArc(x, y, width, height, 0, 360);
         g.fillOval(x, y, width, height);
     }
 
