@@ -237,9 +237,9 @@ public class Cover {
             cover_image.triangle(x, y + (s / 2), x + (s / 2), y, x + s, y + (s / 2), shape_color);
             cover_image.triangle(x, y + (s / 2), x + (s / 2), y + s, x + s, y + (s / 2), shape_color);
         } else if (c == 'x' || c=='X') {
-            cover_image.ellipse(x + (s / 2), y + (s / 3), thick * 2, thick * 2, shape_color);
-            cover_image.ellipse(x + (s / 3), y + s - (s / 3), thick * 2, thick * 2, shape_color);
-            cover_image.ellipse(x + s - (s / 3), y + s - (s / 3), thick * 2, thick * 2, shape_color);
+            cover_image.ellipse(x + (s / 2) - thick, y + (s / 3) - thick, thick * 2, thick * 2, shape_color);
+            cover_image.ellipse(x + (s / 3) - thick, y + s - (s / 3) - thick, thick * 2, thick * 2, shape_color);
+            cover_image.ellipse(x + s - (s / 3) - thick, y + s - (s / 3) - thick, thick * 2, thick * 2, shape_color);
         } else if (c == 'c'|| c=='C') {
             cover_image.rect(x, y + (thick * 3), s, thick, shape_color);
         } else if (c == 'v'|| c=='V') {
